@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import { Modal, Button } from "antd";
 
-export default function PortalModal({ modalContent }) {
+const PortalModal: React.FC = () => {
   const [isModelOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -19,10 +19,12 @@ export default function PortalModal({ modalContent }) {
       {isModelOpen &&
         createPortal(
           <Modal open={isModelOpen} footer={null} onCancel={handleCancel}>
-            <p>{modalContent}</p>
+            <p>modal content</p>
           </Modal>,
           document.body
         )}
     </>
   );
-}
+};
+
+export default PortalModal;
