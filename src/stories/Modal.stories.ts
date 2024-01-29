@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ModalPlugin } from "../components/Modal/Modal";
 
-const meta = {
+const meta: Meta<typeof ModalPlugin> = {
   title: "Components/Modal",
   component: ModalPlugin,
   parameters: {
@@ -23,7 +23,7 @@ const meta = {
       description: "choose size of button",
     },
   },
-} satisfies Meta<typeof ModalPlugin>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
