@@ -32,15 +32,20 @@ Enfin, depuis le navigateur, saisissez l'adresse :
 
 Qui va afficher le tableau de bord Storybook affichant la modal
 
-## Installation de plugin-modal-hocine
+## Installation de plugin-modal-hocine dans un projet React
 
-Depuis le terminal, exécutez :
+Depuis votre terminal, positionnez-vous à la racine de votre projet qui va utiliser la librairie. Puis, exécutez :
 
         npm i modal-plugin-hocine
 
-## Utilisation de la librairie :
+## Utilisation de plugin-modal-hocine:
 
 Cet example montre comment utiliser la librairie dans un projet React
+Vous devez fournir les valeurs des props :
+
+- `buttonValue` : `string`
+- `buttonSize` : `"small" | "middle" | "large"`
+- `modalContent` : `string`
 
 <pre>
 ```
@@ -49,7 +54,6 @@ import { Modal } from "modal-plugin-hocine";
 const Example = () => {
   return (
     < >
-    {/* provide buttonValue, buttonSize and modalContent props to component */}
     < Modal buttonValue={buttonValue} buttonSize={buttonSize} modalContent={modalContent}>
     < /Modal>     
     < />
