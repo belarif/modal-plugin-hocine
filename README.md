@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`plugin-modal-hocine` est une librairie qui fournit une modal. Cette modal s'affiche au clic sur un bouton.
+La librairie permet de personnaliser la modale en modifiant :
 
-## Available Scripts
+- la valeur du bouton : de la prop `buttonValue`
+- la taille du bouton : de la prop `buttonSize`
+- le contenu de la modal : de la prop `modalContent`
 
-In the project directory, you can run:
+## Technologies
 
-### `npm start`
+- React
+- TypeScript
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Visualisation de la modal sur Storybook
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Pour voir à quoi ressemble le composant modal, vous devez d'abord cloner en local le répertoire du projet depuis GitHub comme suit :
 
-### `npm test`
+        git clone https://github.com/belarif/modal-plugin-hocine.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensuite, installez les dépendances, en exécutant la commande :
 
-### `npm run build`
+        npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ensuite, lancez Storybook en exécutant la commande :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+        npm run storybook
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Enfin, depuis le navigateur, saisissez l'adresse :
 
-### `npm run eject`
+        http://localhost:6006/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Qui va afficher le tableau de bord Storybook affichant la modal
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation de plugin-modal-hocine
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Depuis le terminal, exécutez :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+        npm i modal-plugin-hocine
 
-## Learn More
+## Utilisation de la librairie :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Cet example montre comment utiliser la librairie dans un projet React
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<pre>
+```
+import { Modal } from "modal-plugin-hocine";
 
-### Code Splitting
+const Example = () => {
+  return (
+    < >
+    {/* provide buttonValue, buttonSize and modalContent props to component */}
+    < Modal buttonValue={buttonValue} buttonSize={buttonSize} modalContent={modalContent}>
+    < /Modal>     
+    < />
+  );
+};
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default Example;
+```
+</pre>
