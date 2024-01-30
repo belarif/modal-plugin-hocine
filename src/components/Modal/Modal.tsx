@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import { Modal, Button } from "antd";
-import { SizeType } from "antd/es/config-provider/SizeContext";
 
 interface ModalProps {
   buttonValue: string;
