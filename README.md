@@ -52,7 +52,7 @@ import { Modal } from "modal-plugin-hocine";
 const Example = () => {
   return (
     < >
-    < Modal modalContent={modalContent} isOpen={isModalOpen}>
+    < Modal modalContent={modalContent} isOpen={true}>
     < /Modal>     
     < />
   );
