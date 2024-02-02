@@ -1,2 +1,1 @@
-"use strict";var e=require("react"),t=require("react-dom"),n=require("antd");exports.Modal=({buttonValue:r,modalContent:o,buttonSize:a})=>{const[l,u]=e.useState(!1);return e.createElement(e.Fragment,null,e.createElement(n.Button,{size:a,onClick:()=>{u(!0)}},r),l&&t.createPortal(e.createElement(n.Modal,{open:l,footer:null,onCancel:()=>{u(!1)}},e.createElement("p",null,o)),document.body))};
-//# sourceMappingURL=bundle.js.map
+"use strict";var e=require("react"),t=require("react-dom"),r=require("antd");exports.Modal=({modalContent:n,isOpen:a})=>{const[l,o]=e.useState(!0);return e.createElement(e.Fragment,null,a&&t.createPortal(e.createElement(r.Modal,{open:l,footer:null,onCancel:()=>{o(!1)}},e.createElement("p",null,n)),document.body))};

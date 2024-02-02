@@ -9,18 +9,13 @@ const meta: Meta<typeof ModalPlugin> = {
   },
   tags: ["autodocs"],
   argTypes: {
-    buttonValue: {
-      control: "text",
-      description: "customize value of button",
-    },
     modalContent: {
       control: "text",
       description: "customize content of modal",
     },
-    buttonSize: {
-      control: "radio",
-      options: ["small", "middle", "large"],
-      description: "choose size of button",
+    isOpen: {
+      control: "boolean",
+      description: "open or close modal",
     },
   },
 };
@@ -30,8 +25,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    buttonValue: "Open",
     modalContent: "le contenu de la modal",
-    buttonSize: "middle",
+    isOpen: false,
   },
 };

@@ -1,23 +1,13 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
-import { Modal, Button } from "antd";
-
+import { Modal } from "antd";
 interface ModalProps {
-  buttonValue: string;
   modalContent: string;
-  buttonSize?: "small" | "middle" | "large";
+  isOpen?: boolean;
 }
 
-export const ModalPlugin = ({
-  buttonValue,
-  modalContent,
-  buttonSize,
-}: ModalProps) => {
-  const [isModelOpen, setIsModalOpen] = useState(false);
-
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
+export const ModalPlugin = ({ modalContent, isOpen }: ModalProps) => {
+  const [isModelOpen, setIsModalOpen] = useState(true);
 
   const handleCancel = () => {
     setIsModalOpen(false);
@@ -25,10 +15,7 @@ export const ModalPlugin = ({
 
   return (
     <>
-      <Button size={buttonSize} onClick={showModal}>
-        {buttonValue}
-      </Button>
-      {isModelOpen &&
+      {isOpen &&
         createPortal(
           <Modal open={isModelOpen} footer={null} onCancel={handleCancel}>
             <p>{modalContent}</p>
