@@ -1,6 +1,6 @@
 {
   "name": "modal-plugin-hocine",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "library that provide ant Design modal",
   "private": false,
   "main": "dist/cjs/bundle.js",
