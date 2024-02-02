@@ -3,9 +3,8 @@
 `plugin-modal-hocine` est une librairie qui fournit une modal. Cette modal s'affiche au clic sur un bouton.
 La librairie permet de personnaliser la modale en modifiant :
 
-- la valeur du bouton : de la prop `buttonValue`
-- la taille du bouton : de la prop `buttonSize`
 - le contenu de la modal : de la prop `modalContent`
+- l'état de la modal (ouverte/fermée) : de la prop `isOpen`
 
 ## Technologies
 
@@ -43,9 +42,8 @@ Depuis votre terminal, positionnez-vous à la racine de votre projet qui va util
 Cet example montre comment utiliser la librairie dans un projet React
 Vous devez fournir les valeurs des props :
 
-- `buttonValue` : `string`
-- `buttonSize` : `"small" | "middle" | "large"`
 - `modalContent` : `string`
+- `isOpen`: `boolean`
 
 <pre>
 ```
@@ -54,7 +52,7 @@ import { Modal } from "modal-plugin-hocine";
 const Example = () => {
   return (
     < >
-    < Modal buttonValue={buttonValue} buttonSize={buttonSize} modalContent={modalContent}>
+    < Modal modalContent={modalContent} isOpen={isModalOpen}>
     < /Modal>     
     < />
   );
