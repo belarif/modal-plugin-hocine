@@ -1,6 +1,6 @@
 # Introduction
 
-`plugin-modal-hocine` est une librairie qui fournit une modal. Cette modal s'affiche au clic sur un bouton.
+`plugin-modal-hocine` est une librairie qui fournit une modal. Cette modal s'affiche en modifiant la valeur du boolean `isOpen`.
 La librairie permet de personnaliser la modale en modifiant :
 
 - le contenu de la modal : de la prop `modalContent`
